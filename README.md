@@ -2,7 +2,7 @@
 
 **Windows Only**
 
-This is the standalone runnable version of the Laser Click application. It allows you to control your computer mouse using a physical laser pointer and a webcam.
+This is the standalone runnable version of the Laser Click application written in golang. It allows you to control your computer mouse using a physical laser pointer and a webcam.
 
 ## How to Run
 
