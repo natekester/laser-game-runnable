@@ -5,10 +5,23 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>game_ui</title>
-    <script type="module" crossorigin src="/assets/index-4JObtV__.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-2_Y_hZZ3.css">
+    <script type="module" crossorigin src="/assets/index-BDwePOQr.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-cNBiYoxi.css">
   </head>
   <body>
+    <div id="error-box" style="display:none; position:fixed; z-index:9999; top:0; left:0; width:100%; padding:20px; background:red; color:white; font-family:monospace; white-space:pre-wrap;"></div>
+    <script>
+      window.addEventListener('error', function(e) {
+        var box = document.getElementById('error-box');
+        box.style.display = 'block';
+        box.innerText = 'JS Error: ' + e.message + '\nAt: ' + e.filename + ':' + e.lineno + ':' + e.colno + '\n\n' + (e.error ? e.error.stack : '');
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        var box = document.getElementById('error-box');
+        box.style.display = 'block';
+        box.innerText = 'Unhandled Promise Rejection: ' + e.reason;
+      });
+    </script>
     <div id="root"></div>
   </body>
 </html>
